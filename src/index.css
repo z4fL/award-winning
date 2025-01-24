@@ -8,6 +8,15 @@
   --font-circular-web: "circular-web", "sans-serif";
   --font-robert-regular: "robert-regular", "sans-serif";
   --font-robert-medium: "robert-medium", "sans-serif";
+
+  --color-black: #010101;
+  --color-blue-50: #dfdff0;
+  --color-blue-75: #dfdff2;
+  --color-blue-100: #f0f2fa;
+  --color-blue-300: #4fb7dd;
+  --color-violet-300: #5724ff;
+  --color-yellow-100: #8e983f;
+  --color-yellow-300: #edff66;
 }
 
 body {
@@ -42,8 +51,10 @@ body {
 }
 
 @utility special-font {
-  font-family: "Zentry";
-  font-feature-settings: "ss01" on;
+  b {
+    font-family: "Zentry";
+    font-feature-settings: "ss01" on;
+  }
 }
 
 @utility hero-heading {
