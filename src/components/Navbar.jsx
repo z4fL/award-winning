@@ -68,40 +68,38 @@ const Navbar = () => {
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
             />
-            <div className="flex h-full items-center">
-              <div className="hidden md:block">
-                {navItems.map((item) => (
-                  <a
-                    key={item}
-                    href={`${item.toLowerCase()}`}
-                    className="nav-hover-btn"
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-
-              <button
-                onClick={toggleAudioIndicator}
-                className="ml-10 flex items-center space-x-0.5"
-              >
-                <audio
-                  ref={audioElementRef}
-                  src="/audio/loop.mp3"
-                  className="hidden"
-                  loop
-                />
-                {[1, 2, 3, 4].map((bar) => (
-                  <div
-                    key={bar}
-                    className={`indicator-line ${
-                      isIndicatorActive && "active"
-                    }`}
-                    style={{ animationDelay: `${bar * 0.1}s` }}
-                  />
-                ))}
-              </button>
+          </div>
+          <div className="flex h-full items-center">
+            <div className="hidden md:block">
+              {navItems.map((item) => (
+                <a
+                  key={item}
+                  href={`${item.toLowerCase()}`}
+                  className="nav-hover-btn"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
+
+            <button
+              onClick={toggleAudioIndicator}
+              className="ml-10 py-2 flex items-center space-x-0.5 cursor-pointer"
+            >
+              <audio
+                ref={audioElementRef}
+                src="/audio/loop.mp3"
+                className="hidden"
+                loop
+              />
+              {[1, 2, 3, 4].map((bar) => (
+                <div
+                  key={bar}
+                  className={`indicator-line ${isIndicatorActive && "active"}`}
+                  style={{ animationDelay: `${bar * 0.1}s` }}
+                />
+              ))}
+            </button>
           </div>
         </nav>
       </header>
